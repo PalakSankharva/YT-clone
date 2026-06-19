@@ -1,0 +1,286 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f7fbff;
+    color:#1f2937;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:75px;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 30px;
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
+    z-index:1000;
+}
+
+.nav-left{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.menu{
+    font-size:22px;
+    cursor:pointer;
+    color:#3498db;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:24px;
+    font-weight:700;
+}
+
+.logo i{
+    color:#3498db;
+}
+
+.logo span{
+    background:linear-gradient(90deg,#3498db,#6dd5fa);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.search-box{
+    width:45%;
+    display:flex;
+}
+
+.search-box input{
+    width:100%;
+    padding:12px 18px;
+    border:none;
+    outline:none;
+    border-radius:30px 0 0 30px;
+    background:#eef7ff;
+}
+
+.search-box button{
+    border:none;
+    width:60px;
+    background:#3498db;
+    color:white;
+    border-radius:0 30px 30px 0;
+    cursor:pointer;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.nav-right i{
+    font-size:20px;
+    cursor:pointer;
+    color:#3498db;
+}
+
+.nav-right img{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    position:fixed;
+    top:75px;
+    left:0;
+    width:250px;
+    height:100vh;
+    background:white;
+    padding:25px 15px;
+    box-shadow:5px 0 20px rgba(0,0,0,.05);
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    padding:15px;
+    margin-bottom:8px;
+    border-radius:15px;
+    cursor:pointer;
+    transition:.3s;
+    display:flex;
+    gap:15px;
+}
+
+.sidebar li:hover{
+    background:#eef7ff;
+}
+
+.sidebar li.active{
+    background:linear-gradient(135deg,#3498db,#6dd5fa);
+    color:white;
+}
+
+/* MAIN CONTENT */
+
+.main-content{
+    margin-left:250px;
+    margin-top:75px;
+    padding:25px;
+}
+
+.categories{
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    padding-bottom:15px;
+}
+
+.categories::-webkit-scrollbar{
+    display:none;
+}
+
+.categories button{
+    border:none;
+    padding:10px 20px;
+    border-radius:25px;
+    cursor:pointer;
+    background:white;
+    color:#3498db;
+    font-weight:500;
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+.categories button.active{
+    background:linear-gradient(135deg,#3498db,#6dd5fa);
+    color:white;
+}
+
+/* VIDEO GRID */
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+    gap:25px;
+}
+
+.video-card{
+    background:white;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.video-card:hover{
+    transform:translateY(-8px);
+}
+
+.thumbnail{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.video-info{
+    display:flex;
+    gap:15px;
+    padding:15px;
+}
+
+.channel-img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+}
+
+.video-details h3{
+    font-size:16px;
+    margin-bottom:5px;
+}
+
+.video-details p{
+    color:#6b7280;
+    font-size:14px;
+}
+
+.stats{
+    margin-top:4px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .sidebar{
+        width:80px;
+    }
+
+    .sidebar li{
+        justify-content:center;
+        font-size:0;
+    }
+
+    .sidebar li i{
+        font-size:20px;
+    }
+
+    .main-content{
+        margin-left:80px;
+    }
+
+    .search-box{
+        width:35%;
+    }
+}
+
+@media(max-width:768px){
+
+    .sidebar{
+        display:none;
+    }
+
+    .main-content{
+        margin-left:0;
+    }
+
+    .search-box{
+        display:none;
+    }
+
+    .navbar{
+        padding:0 15px;
+    }
+
+    .video-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+.sidebar.hide{
+    transform: translateX(-100%);
+    transition: 0.4s ease;
+}
+
+.video-card{
+    cursor:pointer;
+}
+
+.nav-right i,
+.nav-right img{
+    cursor:pointer;
+}

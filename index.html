@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone UI</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-left">
+            <i class="fas fa-bars menu"></i>
+            <div class="logo">
+                <i class="fab fa-youtube"></i>
+                <span>BlueTube</span>
+            </div>
+        </div>
+
+        <div class="search-box">
+            <input id="searchInput" type="text" placeholder="Search videos...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="nav-right">
+            <i class="fas fa-video"></i>
+            <i class="fas fa-bell"></i>
+            <img src="https://i.pravatar.cc/150?img=8" alt="">
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <ul>
+            <li class="active"><i class="fas fa-home"></i> Home</li>
+            <li><i class="fas fa-compass"></i> Explore</li>
+            <li><i class="fas fa-fire"></i> Trending</li>
+            <li><i class="fas fa-video"></i> Shorts</li>
+            <li><i class="fas fa-history"></i> History</li>
+            <li><i class="fas fa-clock"></i> Watch Later</li>
+            <li><i class="fas fa-heart"></i> Liked Videos</li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Categories -->
+        <div class="categories">
+            <button class="active">All</button>
+            <button>Programming</button>
+            <button>React</button>
+            <button>JavaScript</button>
+            <button>AI</button>
+            <button>Web Dev</button>
+            <button>Tech</button>
+            <button>Gaming</button>
+        </div>
+
+        <!-- Video Grid -->
+        <section class="video-grid" id="videoGrid">
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
